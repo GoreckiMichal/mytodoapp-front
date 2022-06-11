@@ -1,30 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import {TestInterface} from "types";
 
-function App() {
-    const foobar: TestInterface ={
-        x: 2
-    }
+import './App.css';
+import {Navigation} from "./layout/Navigation/Navigation";
+import {Header} from "./layout/Header/Header";
+import {FormTodo} from "./layout/FormTodo/FormTodo";
+import {ListTodo} from "./layout/ListTodo/ListTodo";
+
+
+
+export const App=()=> {
+
     return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <>
+            <Header/>
+            <Navigation/>
+            <FormTodo/>
+            <ListTodo/>
+        </>
+
   );
 }
 
-export default App;
+

@@ -1,0 +1,13 @@
+.FormTodo{
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    width: 100%;
+    height: 8vw;
+    padding: 2em 0;
+}
+
+.FormTodo input{
+    width: 80%;
+    height: 100%;
+}
