@@ -1,4 +1,5 @@
 .Navigation{
+    width: 70vw;
     padding: 1em;
     background-color: yellow;
     display: flex;

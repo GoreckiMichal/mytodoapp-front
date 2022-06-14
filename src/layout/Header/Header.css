@@ -1,8 +1,8 @@
 .Header{
     background-color: red;
+    padding: 1em;
     margin-top: 1em;
     width: 70vw;
-    height: 5vw;
     text-align: center;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;

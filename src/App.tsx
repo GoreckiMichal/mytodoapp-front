@@ -5,6 +5,7 @@ import {Navigation} from "./layout/Navigation/Navigation";
 import {Header} from "./layout/Header/Header";
 import {FormTodo} from "./layout/FormTodo/FormTodo";
 import {ListTodo} from "./layout/ListTodo/ListTodo";
+import {Route, Routes} from "react-router-dom";
 
 
 
@@ -14,7 +15,10 @@ export const App=()=> {
         <>
             <Header/>
             <Navigation/>
-            <FormTodo/>
+            <Routes>
+                <Route path="/" element={<FormTodo/>}/>
+            </Routes>
+
             <ListTodo/>
         </>
 
