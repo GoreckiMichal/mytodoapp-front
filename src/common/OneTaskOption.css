@@ -1,0 +1,25 @@
+.OneTaskOption{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em;
+}
+.OneTaskOption__name-wrapper{
+    display: flex;
+    background-color: saddlebrown;
+}
+
+.OneTaskOption__button-wrapper{
+    display: flex;
+    background-color: #61dafb;
+}
+.OneTaskOption__button{
+    padding: 0 0.5em;
+}
+
+.OneTaskOption__done{
+    text-decoration: line-through;
+}
+
+.OneTaskOption__not-done{
+    text-decoration: none;
+}
