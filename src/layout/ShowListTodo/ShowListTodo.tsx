@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react'
 
-import './ListTodo.css'
+import './ShowListTodo.css'
 import {TodoEntity} from "types";
 import {OneTaskOption} from "../../common/OneTaskOption";
 
 
-export const ListTodo = () => {
+export const ShowListTodo = () => {
     const [todos, setTodos] = useState<TodoEntity[]>([])
     // const [deleteTask, setDeleteTask] = useState<TodoEntity[]>([])
 
@@ -15,20 +15,20 @@ export const ListTodo = () => {
             const res = await fetch(`http://localhost:3001/`);
             const data = await res.json();
             setTodos(data)
-            console.log(data)
         })();
     }, [setTodos]);
 
 
 
-    const oneTask = todos.map(todo=><OneTaskOption key={todo.id}  taskTodo={todo.taskTodo}  deadline={todo.deadline}   delete={`${todo.id}/`} edit={'eee'} done={'sss'} />)
+    const oneTaskWithOption = todos.map(todo=><OneTaskOption key={todo.id}  taskTodo={todo.taskTodo}  deadline={todo.deadline}   delete={`${todo.id}/`} edit={`${todo.id}`} />)
 
-    console.log('onetask list todo', oneTask)
 
     return (
 
         <div className="ListTodo">
-            {oneTask}
+            Wszystkie zadania
+            {oneTaskWithOption}
+
         </div>
     )
 }
