@@ -7,7 +7,7 @@ import {FormTodo} from "./layout/FormTodo/FormTodo";
 import {ShowListTodo} from "./layout/ShowListTodo/ShowListTodo";
 import {Route, Routes} from "react-router-dom";
 import {ErrorPage} from "./ErrorPage/ErrorPage";
-import {ShowOneTaskEdit} from "./ShowOneTaskEdit/ShowOneTaskEdit";
+import {ShowOneTaskEdit} from "./layout/ShowOneTaskEdit/ShowOneTaskEdit";
 
 
 
