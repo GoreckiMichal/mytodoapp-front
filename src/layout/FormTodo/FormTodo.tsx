@@ -8,6 +8,7 @@ import './FormTodo.css'
 
 
 
+
 export const FormTodo = () => {
     const [inputVal, setInputVal] = useState({
         id: '',
@@ -40,23 +41,24 @@ export const FormTodo = () => {
                 taskTodo: '',
                 deadline: ''
             })
-            // setAddedTask(data.id)
+            // setAddedTask(data.taskTodo)
             // setDeadline(data.deadline)
         } finally {
             setLoading(false)
         }
     }
-    if(loading){
-        return (
-            <h2 className="FormTodo__heading">Trwa dodwanie zadania</h2>
-        )
-    }
+    // if(loading){
+    //     return (
+    //         <h2 className="FormTodo__heading">Trwa dodwanie zadania</h2>
+    //     )
+    // }
 
     // if(addedTask && deadline){
     //     return(
     //         <>
-    //             <p>test {addedTask} {deadline}</p>
-    //             Link
+    //             <p>Zadanie dodane {addedTask} {deadline}</p>
+    //
+    //             <Link to="/">Zaktualizuj listę zadań</Link>
     //
     //         </>
     //

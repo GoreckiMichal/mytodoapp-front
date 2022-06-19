@@ -23,3 +23,6 @@
 .OneTaskOption__not-done{
     text-decoration: none;
 }
+.OneTaskOption__date{
+    padding: 0 1em;
+}

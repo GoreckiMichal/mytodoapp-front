@@ -7,22 +7,30 @@ import './Navigation.css'
 const list = [
     {
         name:"start",
-        exact: "true",
         path: "/",
+        exact: true,
+
+    },
+    {
+        name:"Dodaj zadanie",
+        path:"/add",
+        exact: true,
     },
     {
         name:"2023",
         path: "/next-year",
+        exact: true,
     },
     {
         name:"O projekcie",
         path: "/about-project",
+        exact: true,
     },
 ]
 
 
 export const Navigation = ()=>{
-    const menu = list.map(item=><li className="Navigation__item" key={item.name}><NavLink to={item.path}>{item.name}</NavLink></li>)
+    const menu = list.map(item=><li className="Navigation__item" key={item.name}><NavLink  to={item.path}>{item.name}</NavLink></li>)
 
 
     return(
