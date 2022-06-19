@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import {Link} from "react-router-dom";
 
 import './OneTaskOption.css'
-import {TodoEntity} from "types";
+
 
 
 
@@ -19,9 +19,9 @@ export const OneTaskOption = (props: Props) => {
 
 
     const handleChange = () => {
-        if (done === false) {
+        if (!done) {
             setDone(true)
-        } else if (done === true) {
+        } else if (done) {
             setDone(false)
         }
     }
