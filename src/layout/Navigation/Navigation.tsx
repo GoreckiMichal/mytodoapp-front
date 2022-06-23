@@ -22,8 +22,8 @@ const list = [
         exact: true,
     },
     {
-        name:"O projekcie",
-        path: "/about-project",
+        name:"O mnie",
+        path: "/about-me",
         exact: true,
     },
 ]
@@ -35,10 +35,6 @@ export const Navigation = ()=>{
 
     return(
         <nav className="Navigation">
-            <div className="Navigation__option">
-                <button className="Navigation__button">A++</button>
-                <button className="Navigation__button">A--</button>
-            </div>
             {menu}
         </nav>
 

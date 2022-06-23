@@ -2,6 +2,7 @@ import React, {SyntheticEvent, useState} from 'react'
 
 
 import './FormTodo.css'
+import {Link} from "react-router-dom";
 
 
 
@@ -16,8 +17,8 @@ export const FormTodo = () => {
         deadline: ''
     })
     const [loading, setLoading] = useState(false)
-    // const [addedTask, setAddedTask] = useState('')
-    // const [deadline,setDeadline] = useState('')
+    const [addedTask, setAddedTask] = useState('')
+    const [deadline,setDeadline] = useState('')
 
 
     const sendForm = async (e: SyntheticEvent) => {
@@ -41,29 +42,32 @@ export const FormTodo = () => {
                 taskTodo: '',
                 deadline: ''
             })
-            // setAddedTask(data.taskTodo)
-            // setDeadline(data.deadline)
+            setAddedTask(data.taskTodo)
+            setDeadline(data.deadline)
         } finally {
             setLoading(false)
         }
     }
-    // if(loading){
-    //     return (
-    //         <h2 className="FormTodo__heading">Trwa dodwanie zadania</h2>
-    //     )
-    // }
+    if(loading){
+        return (
+            <h2 className="FormTodo__heading">Trwa dodwanie zadania</h2>
+        )
+    }
 
-    // if(addedTask && deadline){
-    //     return(
-    //         <>
-    //             <p>Zadanie dodane {addedTask} {deadline}</p>
-    //
-    //             <Link to="/">Zaktualizuj listę zadań</Link>
-    //
-    //         </>
-    //
-    //     )
-    // }
+    if(addedTask && deadline){
+        return(
+            <>
+                <div className="FormTodo__confirm">
+                    <p className="FormTodo__confirm-info">Dodano zadanie o nazwie: <p className="FormTodo__confirm-info--detail">{addedTask} {deadline}</p> </p>
+                    <br/>
+                </div>
+                <div className="FormTodo__confirm">
+                <Link className="FormTodo__confirm-info-link" to="/"><button className="FormTodo__button">Powrót do strony głównej</button></Link>
+                </div>
+            </>
+
+        )
+    }
 
 
     const updateForm = (key: string, value: any) => {
@@ -79,6 +83,9 @@ export const FormTodo = () => {
                 <input
                     type="text"
                     name="TaskTodo"
+                    required
+                    minLength={3}
+                    maxLength={255}
                     value={inputVal.taskTodo}
                     onChange={e => updateForm('taskTodo', e.target.value)}
                     placeholder="Wpisz zadanie"
@@ -87,6 +94,7 @@ export const FormTodo = () => {
                 <input
                     type="date"
                     name="deadline"
+                    required
                     value={inputVal.deadline}
                     onChange={e => updateForm('deadline', e.target.value)}
                 />

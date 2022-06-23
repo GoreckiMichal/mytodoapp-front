@@ -1,0 +1,39 @@
+.AboutMe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    background-color: #B2C9C3;
+    color: white;
+}
+
+.AboutMe__heading{
+    margin-top: 0.5em;
+}
+
+.AboutMe__text-section{
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+}
+.AboutMe__text-section-img{
+    margin-bottom: 1em;
+}
+.AboutMe__text-section-p {
+    margin: 1em;
+
+}
+.AboutMe__heading-project{
+    margin-bottom: 1em;
+}
+
+.AboutMe__text-project-section--info{
+    display: flex;
+    align-items: flex-end;
+}
+
+a{
+    text-decoration: none;
+    color: #D08C85;
+}

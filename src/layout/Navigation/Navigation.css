@@ -1,13 +1,16 @@
 .Navigation{
     width: 70vw;
     padding: 1em;
-    background-color: yellow;
+    margin-bottom: 1em;
+    border-bottom: 2px solid #C7EEFC;
+    background-color: #B2C9C3;
     display: flex;
     justify-content: space-evenly;
 }
 
 .Navigation__item {
     list-style: none;
+    letter-spacing: 2px;
     font-size: 2.8rem;
     text-transform: uppercase;
 }

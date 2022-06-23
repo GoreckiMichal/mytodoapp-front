@@ -1,14 +1,12 @@
 import React, {SyntheticEvent, useState} from 'react';
-import {TodoEntity} from "types";
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 
 import './OneTaskEdit.css'
 
 interface Props {
-    id: any;
-    taskTodo: any;
-    deadline: any;
-    oneTask?: TodoEntity
+    id: string | undefined;
+    taskTodo: string | undefined;
+    deadline: string | undefined;
 }
 
 export const OneTaskEdit = (props: Props) => {
@@ -16,6 +14,7 @@ export const OneTaskEdit = (props: Props) => {
         taskTodo: '',
         deadline: ''
     })
+    const [statusEdit, setStatusEdit] = useState(false)
 
     const {id} = useParams()
 
@@ -36,6 +35,11 @@ export const OneTaskEdit = (props: Props) => {
                 taskTodo: '',
                 deadline: ''
             })
+        if (!statusEdit) {
+            setStatusEdit(true)
+        } else if (statusEdit) {
+            setStatusEdit(false)
+        }
     }
 
     const updateForm = (key: string, value: any) => {
@@ -45,6 +49,21 @@ export const OneTaskEdit = (props: Props) => {
         }))
     }
 
+
+    if(statusEdit){
+        return(
+            <>
+                <div className="FormEdit__info">
+                    <p className="FormEdit__info--title">Zmieniono nazwę zadania</p> <p className="FormEdit__info--detail">{props.taskTodo}</p>
+                </div>
+                    <div className="FormEdit__back">
+                        <Link className="OneTaskDelete__confirm-info-link" to="/"><button className="OneTaskDelete__button">Powrót do strony głównej</button></Link>
+                    </div>
+
+            </>
+
+        )
+    }
     return (
         <>
             <div className="FormEdit__info">
@@ -54,12 +73,18 @@ export const OneTaskEdit = (props: Props) => {
                 <input
                     type="text"
                     name="taskTodo"
+                    required
+                    minLength={3}
+                    maxLength={255}
                     value={inputVal.taskTodo}
+                    placeholder="Wpisz nową nazwe zadania"
                     onChange={e => updateForm('taskTodo', e.target.value)}
                 />
+                <label className="FormEdit__label" htmlFor="taskTodo">Nowa data</label><br/>
                 <input
                     type="date"
                     name="deadline"
+                    required
                     value={inputVal.deadline}
                     onChange={e => updateForm('deadline', e.target.value)}
                 />
@@ -67,4 +92,6 @@ export const OneTaskEdit = (props: Props) => {
             </form>
         </>
     )
+
+
 }

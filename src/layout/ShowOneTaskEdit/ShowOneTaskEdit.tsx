@@ -17,7 +17,6 @@ export const ShowOneTaskEdit = () => {
             const res = await fetch(`http://localhost:3001/${id}`)
             const data = await res.json()
             setEditTasks(data)
-            console.log('show one task edit', data)
         })();
     }, []);
 

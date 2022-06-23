@@ -18,6 +18,7 @@ export const OneTaskOption = (props: Props) => {
     const [done, setDone] = useState(false)
 
 
+
     const handleChange = () => {
         if (!done) {
             setDone(true)
@@ -25,27 +26,20 @@ export const OneTaskOption = (props: Props) => {
             setDone(false)
         }
     }
-    const deleteTask = async (e: any) => {
-        e.preventDefault()
-        const res = await fetch(`http://localhost:3001/${props.delete}`, {
-            method: 'DELETE',
-        });
-    }
-
 
 
     return (
         <div className="OneTaskOption">
             <div className="OneTaskOption__name-wrapper">
                 <p className={done ? 'OneTaskOption__done' : 'OneTaskOption__not-done'}>{props.taskTodo}:</p>
-                <p className="OneTaskOption__date">{props.deadline}</p>
+                <p className={done ? 'OneTaskOption__done OneTaskOption__date' : 'OneTaskOption__date OneTaskOption__not-done'}>{props.deadline}</p>
             </div>
             <div className="OneTaskOption__button-wrapper">
-                <Link className="OneTaskOption__button OneTaskOption__delete" to={props.delete}>
-                    <button onClick={deleteTask}>X</button>
+                <Link  to={props.delete}>
+                    <button className="OneTaskOption__button">X</button>
                 </Link>
-                <Link className="OneTaskOption__button OneTaskOption__edit" to={props.edit}>
-                    <button>Edit</button>
+                <Link  to={props.edit}>
+                    <button className="OneTaskOption__button">Edit</button>
                 </Link>
                 <button className="OneTaskOption__button"
                         onClick={handleChange}>  {done ? "Anuluj" : "Zrobione"} </button>

@@ -1,24 +1,37 @@
 .FormEdit{
     display: flex;
     justify-content: center;
-    background-color: #fff;
+    background-color: #B2C9C3;
     width: 70vw;
-    height: 8vw;
-    padding: 2em 0;
-    font-weight: 100;
+    height: 10vw;
+    padding-bottom: 2em;
+}
+.FormEdit__back{
+    display: flex;
+    justify-content: center;
+    background-color: #B2C9C3;
+    width: 70vw;
+    padding-bottom: 1em;
 }
 
 .FormEdit input{
     padding: 2em;
     margin: 1em;
     width: 100%;
-    height: 100%;
+    background-color: #B2C9C3;
+    border:2px solid #C7EEFC ;
+    color: white;
 }
 
 .FormEdit__button{
-    padding: 2em;
-    margin: 1em;
-    height: 100%;
+    padding: 0 2em;
+    margin: 1em 1em;
+    background-color: #D08C85;
+    color: white;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
 }
 
 label{
@@ -29,26 +42,25 @@ label{
     align-items: center;
 }
 
-.FormEdit__button{
-    padding: 2em;
-    margin: 1em;
-    height: 100%;
-}
 
 .FormEdit__info{
     display: flex;
     justify-content: center;
     width: 70vw;
-    height: 100%;
-    background-color: #fff;
+    height: 10vh;
+    background-color: #B2C9C3;
     padding: 1em;
+    color: white;
+    font-weight: 100;
 }
 .FormEdit__info--detail{
-    font-weight: bold;
+    font-weight: 100;
     padding: 0 0.5em;
-    color: cadetblue;
+    color: #D08C85;
 }
 
-.Form__info--title{
-    font-weight: lighter;
+.FormEdit__info--title{
+    font-weight: 100;
 }
+
+

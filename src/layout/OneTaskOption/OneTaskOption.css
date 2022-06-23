@@ -1,0 +1,46 @@
+.OneTaskOption{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em;
+    border-bottom: 1px solid #C7EEFC;
+    margin: 0.5em;
+}
+.OneTaskOption__name-wrapper{
+    display: flex;
+    padding: 0.5em;
+}
+
+.OneTaskOption__button-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 3rem;
+    padding: 0.5em;
+}
+.OneTaskOption__button{
+    background-color: #D08C85;
+    color: white;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0.5rem;
+    padding: 0 0.5em;
+    min-width: 7em;
+    height: 2em;
+    border: none;
+}
+.OneTaskOption__date{
+    color: white;
+    padding: 0 1em;
+}
+
+.OneTaskOption__done{
+    color: #315563;
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
+
+.OneTaskOption__not-done{
+    color: white;
+    text-decoration: none;
+}

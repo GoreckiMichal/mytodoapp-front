@@ -1,5 +1,4 @@
 .Header{
-    background-color: red;
     padding: 1em;
     margin-top: 1em;
     width: 70vw;
@@ -15,5 +14,5 @@
     align-items: center;
     font-size: 4rem;
     font-weight: 800;
-    color: #61dafb;
+    color: white;
 }

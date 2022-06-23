@@ -1,0 +1,19 @@
+.NextYear{
+    background-color: #B2C9C3;
+    width: 70vw;
+    padding-bottom: 1em;
+    color: white;
+    text-align: center;
+
+}
+.NextYear__title{
+    font-weight: 100;
+    padding-bottom: 1em;
+}
+.NextYear__list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    color: #D08C85;
+}

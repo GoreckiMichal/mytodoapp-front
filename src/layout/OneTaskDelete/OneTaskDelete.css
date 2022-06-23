@@ -1,65 +1,52 @@
-.FormTodo{
+.OneTaskDelete{
     display: flex;
     justify-content: center;
+    flex-direction: column;
     background-color: #B2C9C3;
     width: 70vw;
-    height: 10vw;
-    padding: 2em 0;
+    padding-bottom: 1em;
 }
-
-.FormTodo input{
-    padding: 2em;
-    margin: 1em;
-    width: 100%;
-    background-color: #B2C9C3;
-    border:2px solid #C7EEFC ;
+.OneTaskDelete__title{
+    font-weight: 100;
+    margin-bottom: 0.5em;
+    text-align: center;
     color: white;
 }
 
-.FormTodo__confirm{
+.OneTaskDelete__confirm{
     display: flex;
     justify-content: center;
     background-color: #B2C9C3;
     width: 70vw;
-    height: 15vh;
+    height: 10vh;
     font-weight: 100;
 }
 
-.FormTodo__confirm-info{
+.OneTaskDelete__confirm-info{
+    padding: 1em 0;
     color: white;
-
 }
-.FormTodo__confirm-info--detail{
+.OneTaskDelete__confirm-info--detail{
     display: flex;
     justify-content: center;
-    padding: 1em;
+    padding: 1em 0.2em;
     color: #D08C85;
 }
-.FormTodo__confirm-info-link{
+.OneTaskDelete__confirm-info-link{
     display: block;
     color: white;
     text-decoration: none;
 }
 
-.FormTodo__button{
+.OneTaskDelete__button{
     background-color: #D08C85;
     color: white;
     border-radius: 4px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin: 2.1rem 0.5rem;
     min-width: 7em;
     height: 3em;
     border: none;
     padding: 0 0.5em;
 }
 
-label{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2em;
-    margin: 1em;
-    color: white;
-    font-weight: 100;
-}
