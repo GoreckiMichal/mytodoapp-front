@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {Link, } from "react-router-dom";
+import {apiUrl} from "../../config/api";
 
 import './OneTaskDelete.css'
 
@@ -14,7 +15,7 @@ export const OneTaskDelete = (props: Props) => {
 
     const deleteTask = async (e: any) => {
         e.preventDefault()
-        const res = await fetch(`http://localhost:3001/${props.deleteId}`, {
+        const res = await fetch(`${apiUrl}/${props.deleteId}`, {
             method: 'DELETE',
         });
         if (!statusDelete) {

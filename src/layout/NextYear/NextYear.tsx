@@ -1,14 +1,15 @@
 import React, {useEffect, useState} from 'react'
 import {TodoEntity} from "types";
-import './NextYear.css'
+import {apiUrl} from "../../config/api";
 
+import './NextYear.css'
 export const NextYear = () => {
 
     const [nextYearTasks, setNextYearTasks] = useState<TodoEntity[]>([])
 
     useEffect(() => {
         (async () => {
-            const res = await fetch(`http://localhost:3001/next-year`);
+            const res = await fetch(`${apiUrl}/next-year`);
             const data = await res.json();
             setNextYearTasks(data)
         })();

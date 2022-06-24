@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react'
-
 import './ShowListTodo.css'
 import {TodoEntity} from "types";
 import {OneTaskOption} from "../OneTaskOption/OneTaskOption";
+import {apiUrl} from "../../config/api";
 
 
 export const ShowListTodo = () => {
@@ -12,7 +12,7 @@ export const ShowListTodo = () => {
 
     useEffect(() => {
         (async () => {
-            const res = await fetch(`http://localhost:3001/`);
+            const res = await fetch(`${apiUrl}/`);
             const data = await res.json();
             setTodos(data)
         })();

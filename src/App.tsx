@@ -20,13 +20,13 @@ export const App=()=> {
             <Header/>
             <Navigation/>
             <Routes>
-                <Route path="/add"  element={<FormTodo/>}/>
                 <Route path="/" element={<ShowListTodo/>}/>
-                <Route path="/*" element={<ErrorPage/>}/>
+                <Route path="/add"  element={<FormTodo/>}/>
                 <Route path="/edit/:id" element={<ShowOneTaskEdit/>}/>
                 <Route path="/delete/:id" element={<ShowOneTaskDelete/>}/>
                 <Route path="/next-year" element={<NextYear/>}/>
                 <Route path="/about-me" element={<AboutMe/>}/>
+                <Route path="/*" element={<ErrorPage/>}/>
             </Routes>
         </>
 

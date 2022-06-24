@@ -1,5 +1,6 @@
 import React, {SyntheticEvent, useState} from 'react';
 import {Link, useParams} from "react-router-dom";
+import {apiUrl} from "../../config/api";
 
 import './OneTaskEdit.css'
 
@@ -20,7 +21,7 @@ export const OneTaskEdit = (props: Props) => {
 
     const sendForm = async (e: SyntheticEvent) => {
         e.preventDefault()
-            const todoRes = await fetch(`http://localhost:3001/${id}`, {
+            const todoRes = await fetch(`${apiUrl}/${id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',

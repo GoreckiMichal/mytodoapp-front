@@ -3,6 +3,7 @@ import React, {SyntheticEvent, useState} from 'react'
 
 import './FormTodo.css'
 import {Link} from "react-router-dom";
+import {apiUrl} from "../../config/api";
 
 
 
@@ -26,7 +27,7 @@ export const FormTodo = () => {
         setLoading(true)
 
         try {
-            const todoRes = await fetch('http://localhost:3001/add/', {
+            const todoRes = await fetch(`${apiUrl}/add/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
