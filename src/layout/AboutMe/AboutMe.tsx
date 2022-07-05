@@ -31,15 +31,6 @@ export const AboutMe = () => {
                                 Frontend został napisany w React. Chciałbym lepiej poznać ten język bo ma naprawdę
                                 ogromne
                                 możliwości.
-
-                            </p>
-
-                            <p className="AboutMe__text-section-p">
-                                Zdecydowałem się napisać aplikację TODO - ponieważ zawiera podstawowe operacje na bazach
-                                danych.
-                                Frontend został napisany w React. Chciałbym lepiej poznać ten język bo ma naprawdę
-                                ogromne
-                                możliwości.
                             </p>
                         <p className="AboutMe__text-section-p">
                             Zapraszam do pobrania CV: <a href="https://gm.networkmanager.pl/img/CV.pdf" target="_blank">Pobierz CV</a>
@@ -54,7 +45,7 @@ export const AboutMe = () => {
                         W przyszłości w aplikacji chciałbym dodać RWD oraz poszerzyć swoją wiedzę w React bym mógł zastosować SASS i lepiej zarządzać stylami CSS.
                     </p>
                     <p className="AboutMe__text-section-p">
-                        Dodatkowo chciałbym poznać i zastosować na frontend Chakra UI. Natomiast na backend dodać JWT
+                        Dodatkowo chciałbym poznać i zastosować na frontend Chakra UI.
                     </p>
                 </div>
             </div>
